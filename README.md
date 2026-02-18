@@ -10,4 +10,4 @@ Site desenvolvido para a disciplina de Desenvolvimento Web, com o intuito de aju
 ### Status 
 Em desenvolvimento.
 ---
-##Desenvolvedor:## José Victor
+**Desenvolvedor:** José Victor
