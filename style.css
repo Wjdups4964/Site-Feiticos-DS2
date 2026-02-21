@@ -7,7 +7,71 @@ body {
     font-family: Arial, sans-serif;
     background-size: cover;
     background-color: #121212;
+    text-align: justify;
 }
+
+.layout-principal {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    gap: 40px;
+    margin-left: 20px;
+}
+
+.sidebar {
+    width: 180px;
+    background-color: #1a1a1a;
+    border: 1px solid #c9a227;
+    padding: 20px;
+    height: fit-content;
+    top: 20px;
+}
+
+.sidebar.navegacao {
+    position: absolute;
+    left: 20px;
+    top: 130px;
+}
+
+.sidebar.curiosidades {
+    color: #d1d1d1;
+    font-size: 1rem;
+    position: absolute;
+    right: 20px;
+    top: 130px;
+}
+
+.sidebar h3 {
+    color: #DEB371;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #c9a227;
+    font-size: 1.2rem;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    margin-bottom: 12px;
+}
+
+.sidebar a {
+    color: #d1d1d1;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.sidebar a:hover {
+    color: #DEB371;
+}
+
+.conteudo-central {
+    flex: 1;
+    max-width: 800px;
+}
+
 header{
     background-color: #1a1a1a;
     color: white;
@@ -17,10 +81,18 @@ header{
     border-bottom: 2px solid #DEB371;
 }
 
+.inicio{
+    max-width: 700px;
+    margin: 20px auto 50px;
+    color: #d1d1d1;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
 .magias_container {
     display: grid;
-    height: 60vh;
-    grid-template-columns: repeat(2, 200px);
+    height: 300px;
+    grid-template-columns: repeat(4, 160px);
     justify-content: center;
     align-content: center;
     gap: 20px;
@@ -32,8 +104,9 @@ header{
   align-items: center;       
   justify-content: center; 
   text-align: center;        
-  border: 1px solid #c9a227; 
-  padding: 15px;
+  border: 1px solid #c9a227;
+  padding: 10px;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .card a{
@@ -44,7 +117,7 @@ header{
 
 .card h2:hover {
     transition: transform 0.3s ease, filter 0.3s ease;
-    transform: scale(1.15);
+    transform: scale(1.1);
 }
 
 .card img {
@@ -52,6 +125,7 @@ header{
     height: auto;
     margin-bottom: 10px;
 }
+
 
 .feiticos{
     color: #74ACDF;
@@ -67,4 +141,43 @@ header{
 
 .sortilegios{
     color: #8A2BE2;
+}
+
+.card.feiticos:hover {
+    box-shadow: 0 0 20px rgba(116, 172, 223, 0.6);
+    border-color: #74ACDF;
+}
+
+.card.milagres:hover {
+    box-shadow: 0 0 20px rgba(222, 179, 113, 0.6);
+    border-color: #DEB371;
+}
+
+.card.piromancias:hover {
+    box-shadow: 0 0 20px rgba(255, 69, 0, 0.6);
+    border-color: #FF4500;
+}
+
+.card.sortilegios:hover {
+    box-shadow: 0 0 20px rgba(138, 43, 226, 0.6);
+    border-color: #8A2BE2;
+}
+
+.sidebar-redes-sociais {
+    position: fixed;
+    bottom: 20px; 
+    left: 20px;   
+    display: flex;
+    flex-direction: column; 
+    gap: 12px;      
+}
+
+.sidebar-redes-sociais img{
+    width: 45px;  
+    height: 45px;
+}
+
+.sidebar-redes-sociais img:hover{
+    transform: scale(1.15);
+    transition: transform 0.3s ease;
 }
