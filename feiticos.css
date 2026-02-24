@@ -1,0 +1,15 @@
+.secao_feiticos{
+    margin: 20px;
+    padding: 10px;
+    border: 2px solid #deb371;
+    background-color: #1a1a1a;
+}
+
+.lista_feiticos{
+    color: #74ACDF;
+}
+
+.lista_feiticos img{
+    width: 80px;
+    height: auto;
+}
