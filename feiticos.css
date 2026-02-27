@@ -1,15 +1,51 @@
+body{
+    background-color: #1D94E0;
+}
+
+header{
+    border-bottom: 2px solid #E0681D;
+}
+
 .secao_feiticos{
-    margin: 20px;
-    padding: 10px;
-    border: 2px solid #deb371;
+    margin: 10px 100px 50px 100px;
+    border: 3px solid #E0681D;
     background-color: #1a1a1a;
 }
 
 .lista_feiticos{
     color: #74ACDF;
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    justify-content: center;
+}
+
+.lista_feiticos div{
+    text-align: center;
+    border: 1px solid #E0681D;
+    margin: 10px;
+    padding: 5px;
 }
 
 .lista_feiticos img{
-    width: 80px;
+    width: 150px;
     height: auto;
+}
+
+.navegacao{
+    border: 1px solid #E0681D;
+}
+.sidebar.navegacao {    
+    margin-top: 12px;
+    position: absolute;
+    left: 150px;
+    top: 90px;
+}
+
+.sidebar h3{
+   color: #E0681D; 
+   border-bottom: 1px solid #E0681D;
+}
+
+.sidebar a:hover {
+    color: #E0681D;
 }
