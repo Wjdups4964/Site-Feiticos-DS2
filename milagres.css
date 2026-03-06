@@ -1,25 +1,25 @@
 body{
-    background-color: #1D94E0;
+    background-color: #B59C73;
 }
 
 header{
-    border-bottom: 2px solid #E0681D;
+    border-bottom: 2px solid #738CB5;
 }
 
 .secao{
-    border-color: #E0681D;
+    border-color: #738CB5;
 }
 
 .lista{
-    color: #74ACDF;
+    color: #DEB371;
 }
 
 .lista div{
-    border-color: #E0681D;
+    border-color: #738CB5;
 }
 
 .navegacao{
-    border: 1px solid #E0681D;
+    border: 1px solid #738CB5;
 }
 .sidebar.navegacao {    
     width: 200px;
@@ -29,12 +29,12 @@ header{
 }
 
 .sidebar h3{
-   color: #E0681D; 
-   border-bottom: 1px solid #E0681D;
+   color: #738CB5; 
+   border-bottom: 1px solid #738CB5;
 }
 
 .sidebar a:hover {
-    color: #E0681D;
+    color: #738CB5;
 }
 
 @media (max-width: 762px) {

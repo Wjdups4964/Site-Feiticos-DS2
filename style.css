@@ -180,3 +180,40 @@ header{
     transform: scale(1.15);
     transition: transform 0.3s ease;
 }
+
+/* Estilos pre definidos para as paginas das magias */
+
+.secao{
+    display: flex;
+    margin: 10px 100px 50px 100px;
+    border: 3px solid;
+    background-color: #1a1a1a;
+    padding: 20px;
+    gap: 30px;
+}
+
+.lista{
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 256px);
+    justify-content: center;
+    gap: 15px;
+    width: fit-content;
+}
+
+.lista div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid;
+    padding: 15px;
+    background-color: #121212;
+    transition: transform 0.2s ease;
+}
+
+.lista img{
+    width: 150px;
+    height: auto;
+    image-rendering: pixelated;
+}
