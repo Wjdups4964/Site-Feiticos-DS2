@@ -36,22 +36,3 @@ header{
 .sidebar a:hover {
     color: #701AC0;
 }
-
-@media (max-width: 762px) {
-    .secao{
-        flex-direction: column;
-        margin: 10px 20px 50px 20px;
-        align-items: center;
-    }
-
-    .sidebar.navegacao {
-        width: 50%;
-        position: static;
-        text-align: center;
-    }
-    
-    .sidebar{
-        justify-content: center;
-        align-items: center;
-    }
-}

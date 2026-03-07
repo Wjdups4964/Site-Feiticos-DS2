@@ -20,68 +20,26 @@ header{
 
 .layout-principal {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: flex-start;
     padding: 20px;
     gap: 40px;
     margin-left: 20px;
+    
 }
 
-.sidebar {
-    width: 180px;
-    background-color: #1a1a1a;
-    border: 1px solid #c9a227;
-    padding: 20px;
-    height: fit-content;
-    top: 20px;
-}
 
-.sidebar.navegacao {
-    position: absolute;
-    left: 20px;
-    top: 130px;
-}
+/* Estilos para o conteúdo central */
 
-.sidebar.curiosidades {
-    color: #d1d1d1;
-    font-size: 1rem;
-    position: absolute;
-    right: 20px;
-    top: 130px;
-}
-
-.sidebar h3 {
-    color: #DEB371;
-    margin-bottom: 15px;
-    border-bottom: 1px solid #c9a227;
-    font-size: 1.2rem;
-}
-
-.sidebar ul {
-    list-style: none;
-}
-
-.sidebar li {
-    margin-bottom: 12px;
-}
-
-.sidebar a {
-    color: #d1d1d1;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: color 0.3s;
-}
-
-.sidebar a:hover {
-    color: #DEB371;
-}
 
 .conteudo-central {
     flex: 1;
-    max-width: 800px;
 }
 
 .inicio{
     max-width: 700px;
+    flex-grow: 1;
+    display: grid;
     margin: 20px auto 50px;
     color: #d1d1d1;
     font-size: 1.1rem;
@@ -90,8 +48,8 @@ header{
 
 .magias_container {
     display: grid;
-    height: 300px;
-    grid-template-columns: repeat(4, 160px);
+    height: auto;
+    grid-template-columns: repeat(4, minmax(120px, 160px));
     justify-content: center;
     align-content: center;
     gap: 20px;
@@ -106,6 +64,7 @@ header{
   border: 1px solid #c9a227;
   padding: 10px;
   transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  aspect-ratio: 1 / 1;
 }
 
 .card a{
@@ -120,9 +79,10 @@ header{
 }
 
 .card img {
-    width: 80%;
+    width: 100px;
     height: auto;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    image-rendering: pixelated;
 }
 
 
@@ -162,6 +122,54 @@ header{
     border-color: #8A2BE2;
 }
 
+/* Estilos para as sidebars */
+
+.sidebar {
+    flex: 0 1 200px;
+    background-color: #1a1a1a;
+    border: 1px solid #c9a227;
+    padding: 20px;
+    height: fit-content;
+}
+
+.sidebar.curiosidades {
+    flex: 0 1 250px;
+    color: #d1d1d1;
+    font-size: 1rem;
+    word-wrap: break-word;
+    width: 250px;
+    margin-right: 20px;
+    word-wrap: break-word;
+}
+
+.sidebar h3 {
+    color: #DEB371;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #c9a227;
+    font-size: 1.2rem;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    margin-bottom: 12px;
+}
+
+.sidebar a {
+    color: #d1d1d1;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.sidebar a:hover {
+    color: #DEB371;
+}
+
+/* Estilos para a sidebar de redes sociais */
+
 .sidebar-redes-sociais {
     position: fixed;
     bottom: 20px; 
@@ -181,7 +189,9 @@ header{
     transition: transform 0.3s ease;
 }
 
+
 /* Estilos pre definidos para as paginas das magias */
+
 
 .secao{
     display: flex;
