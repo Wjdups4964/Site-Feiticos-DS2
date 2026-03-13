@@ -3,23 +3,23 @@ body{
 }
 
 header{
-    border-bottom: 2px solid #008BAB;
+    border-bottom: 2px solid #AB7600;
 }
 
 .secao{
-    border-color: #008BAB;
+    border-color: #AB7600;
 }
 
 .lista{
-    color: #FF4500;
+    color: #AB2000;
 }
 
 .lista div{
-    border-color: #008BAB;
+    border-color: #AB7600;
 }
 
 .navegacao{
-    border: 1px solid #008BAB;
+    border: 1px solid #AB7600;
 }
 .sidebar.navegacao {    
     width: 200px;
@@ -29,10 +29,10 @@ header{
 }
 
 .sidebar h3{
-   color: #008BAB; 
-   border-bottom: 1px solid #008BAB;
+   color: #AB7600; 
+   border-bottom: 1px solid #AB7600;
 }
 
 .sidebar a:hover {
-    color: #E0681D;
+    color: #AB7600;
 }

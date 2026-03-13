@@ -1,4 +1,5 @@
 /* Responsividade da parte do index */
+
 @media (max-width: 1280px) {
     .layout-principal {
         flex-direction: column; 
@@ -12,6 +13,7 @@
 }
 
 /* Responsividade da parte dos sites das magias */
+
 @media (max-width: 762px) {
     .secao{
         flex-direction: column;
