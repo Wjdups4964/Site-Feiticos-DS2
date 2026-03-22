@@ -1,17 +1,19 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-size: cover;
-    background-color: #121212;
+    font-family: 'Inter', sans-serif;
+    background-color:#0f0f0f;
+    color:#d1d1d1;
     text-align: justify;
+    line-height:1.6;
 }
 
 header{
-    background-color: #1a1a1a;
+    background: linear-gradient(#1c1c1c,#111);
     color: white;
     padding: 20px;
     text-align: center;
@@ -19,59 +21,46 @@ header{
 }
 
 .layout-principal {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 220px 1fr 220px;
     padding: 20px;
     gap: 40px;
-    margin-left: 20px;
-    
 }
 
 
 /* Estilos para o conteúdo central */
 
-
-.conteudo-central {
-    flex: 1;
-}
-
 .inicio{
-    max-width: 700px;
-    flex-grow: 1;
-    display: grid;
-    margin: 20px auto 50px;
+    max-width: 750px;
+    margin: 20px auto 60px;
     color: #d1d1d1;
     font-size: 1.1rem;
-    line-height: 1.6;
 }
 
 .magias_container {
     display: grid;
-    height: auto;
-    grid-template-columns: repeat(4, minmax(120px, 160px));
-    justify-content: center;
-    align-content: center;
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+    max-width: 750px;
+    margin: 0 auto;
 }
 
-.card {
-  display: flex;
-  flex-direction: column;    
-  align-items: center;       
-  justify-content: center; 
-  text-align: center;        
-  border: 1px solid #c9a227;
-  padding: 10px;
-  transition: box-shadow 0.3s ease, border-color 0.3s ease;
-  aspect-ratio: 1 / 1;
+.card{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    background:#181818;
+    border-radius: 10px;
+    border: 2px solid #DEB371;
+    padding: 25px;
+    transition: all 0.35s ease;
 }
 
 .card a{
     color: inherit;
     text-decoration: none;
 }
-
 
 .card h2:hover {
     transition: transform 0.3s ease, filter 0.3s ease;
@@ -80,7 +69,7 @@ header{
 
 .card img {
     width: 100px;
-    height: auto;
+    height: 100px;
     margin-bottom: 15px;
     image-rendering: pixelated;
 }
@@ -125,28 +114,18 @@ header{
 /* Estilos para as sidebars */
 
 .sidebar {
-    flex: 0 1 200px;
-    background-color: #1a1a1a;
-    border: 1px solid #c9a227;
+    background:#181818;
+    border-radius:8px;
+    border:1px solid #DEB371;
     padding: 20px;
-    height: fit-content;
-}
-
-.sidebar.curiosidades {
-    flex: 0 1 250px;
-    color: #d1d1d1;
-    font-size: 1rem;
-    word-wrap: break-word;
-    width: 250px;
-    margin-right: 20px;
-    word-wrap: break-word;
+    align-self:start;
 }
 
 .sidebar h3 {
     color: #DEB371;
     margin-bottom: 15px;
     border-bottom: 1px solid #c9a227;
-    font-size: 1.2rem;
+    padding-bottom: 5px;
 }
 
 .sidebar ul {
@@ -160,7 +139,6 @@ header{
 .sidebar a {
     color: #d1d1d1;
     text-decoration: none;
-    font-size: 1rem;
     transition: color 0.3s;
 }
 
@@ -168,25 +146,69 @@ header{
     color: #DEB371;
 }
 
-/* Estilos para a sidebar de redes sociais */
-
-.sidebar-redes-sociais {
-    position: fixed;
-    bottom: 20px; 
-    left: 20px;   
+.sidebar.navegacao {
     display: flex;
-    flex-direction: column; 
-    gap: 12px;      
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
-.sidebar-redes-sociais img{
-    width: 45px;  
-    height: 45px;
+.sidebar.navegacao ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.sidebar-redes-sociais img:hover{
-    transform: scale(1.15);
-    transition: transform 0.3s ease;
+.curiosidades {
+    font-size: 1rem;
+}
+
+/* Estilos para footer e redes sociais */
+
+footer {
+    background: linear-gradient(#1c1c1c, #111);
+    border-top: 2px solid #DEB371;
+    padding: 35px 20px;
+    margin-top: 60px;
+}
+
+.footer-redes-sociais {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-redes-sociais a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #222;
+    border: 2px solid #DEB371;
+    transition: all 0.3s ease;
+}
+
+.footer-redes-sociais a:hover {
+    background: #DEB371;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(222, 179, 113, 0.3);
+}
+
+.footer-redes-sociais img {
+    width: 28px;
+    height: 28px;
+    filter: brightness(1);
+    transition: filter 0.3s ease;
+}
+
+.footer-redes-sociais a:hover img {
+    filter: brightness(0.1);
 }
 
 

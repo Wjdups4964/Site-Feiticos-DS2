@@ -1,34 +1,197 @@
-/* Responsividade da parte do index */
+/* Responsividade para o index.html */
 
-@media (max-width: 1280px) {
+/* Tablet e desktop médio */
+@media (max-width: 1024px) {
     .layout-principal {
-        flex-direction: column; 
-        align-items: center;   
-    }
-
-    .sidebar, .sidebar.curiosidades {
-        width: 100%;       
-        max-width: 800px; 
-    }
-}
-
-/* Responsividade da parte dos sites das magias */
-
-@media (max-width: 762px) {
-    .secao{
-        flex-direction: column;
-        margin: 10px 20px 50px 20px;
-        align-items: center;
+        grid-template-columns: 180px 1fr 180px;
+        gap: 20px;
+        padding: 15px;
     }
 
     .sidebar.navegacao {
-        width: 50%;
+        margin: 0 auto;
+    }
+
+    .magias_container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .inicio {
+        font-size: 1rem;
+        margin: 15px auto 40px;
+    }
+
+    .sidebar {
+        padding: 15px;
+    }
+}
+
+/* Mobile grande */
+@media (max-width: 768px) {
+    .layout-principal {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .sidebar.navegacao {
+        margin: 0 auto;
+        max-width: 350px;
+        width: 100%;
+    }
+
+    .magias_container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin: 0;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .card img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .inicio {
+        font-size: 0.95rem;
+        margin: 10px 0 30px;
+        text-align: left;
+    }
+
+    .sidebar {
+        padding: 10px;
+        text-align: center;
+    }
+
+    footer {
+        padding: 25px 10px;
+        margin-top: 40px;
+    }
+}
+
+/* Mobile pequeno */
+@media (max-width: 480px) {
+    .layout-principal {
+        padding: 5px;
+        gap: 10px;
+    }
+
+    .inicio {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .card img {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 10px;
+    }
+
+    .card h2 {
+        font-size: 1.1rem;
+    }
+
+    .sidebar h3 {
+        font-size: 1rem;
+    }
+
+    .sidebar ul li {
+        margin-bottom: 8px;
+    }
+
+    .sidebar.navegacao {
+        margin: 0 auto;
+        max-width: 300px;
+        width: 100%;
+    }
+
+    footer {
+        padding: 20px 10px;
+        margin-top: 30px;
+    }
+
+    .footer-redes-sociais {
+        gap: 15px;
+    }
+
+    .footer-redes-sociais a {
+        width: 45px;
+        height: 45px;
+    }
+
+    .footer-redes-sociais img {
+        width: 24px;
+        height: 24px;
+    }
+
+    header {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Responsividade para as páginas das magias */
+
+@media (max-width: 1024px) {
+    .secao {
+        margin: 10px 50px 50px 50px;
+        gap: 20px;
+    }
+
+    .lista {
+        grid-template-columns: repeat(auto-fit, 200px);
+    }
+}
+
+@media (max-width: 762px) {
+    .secao {
+        flex-direction: column;
+        margin: 10px 20px 50px 20px;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .sidebar.navegacao {
+        width: 80%;
+        max-width: 400px;
         position: static;
         text-align: center;
     }
-    
-    .sidebar{
+
+    .sidebar {
         justify-content: center;
         align-items: center;
+    }
+
+    .lista {
+        grid-template-columns: repeat(auto-fit, 150px);
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .secao {
+        margin: 10px 10px 30px 10px;
+        padding: 15px;
+    }
+
+    .sidebar.navegacao {
+        width: 100%;
+    }
+
+    .lista {
+        grid-template-columns: 1fr;
+        gap: 8px;
     }
 }
