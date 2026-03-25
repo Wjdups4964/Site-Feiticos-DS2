@@ -194,4 +194,26 @@
         grid-template-columns: 1fr;
         gap: 8px;
     }
+
+
+/* Responsividade do iframe */
+
+@media (max-width: 1024px) {
+    .iframe-detalhes {
+        min-height: 65vh;
+        max-height: calc(100vh - 130px);
+    }
+}
+
+@media (max-width: 768px) {
+    .iframe-detalhes {
+        min-height: 60vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .iframe-detalhes {
+        min-height: 55vh;
+        margin-bottom: 15px;
+    }
 }
