@@ -1,38 +1,6 @@
-body{
-    background-color: #CD9A5D;
-}
-
-header{
-    border-bottom: 2px solid #92642D;
-}
-
-.secao{
-    border-color: #92642D;
-}
-
-.lista{
-    color: #DEB371;
-}
-
-.lista div{
-    border-color: #92642D;
-}
-
-.navegacao{
-    border: 1px solid #92642D;
-}
-.sidebar.navegacao {    
-    width: 200px;
-    flex-shrink: 0; 
-    position: sticky;
-    top: 20px;
-}
-
-.sidebar h3{
-   color: #92642D; 
-   border-bottom: 1px solid #92642D;
-}
-
-.sidebar a:hover {
-    color: #92642D;
+:root {
+    --cor-tema:        #92642D;
+    --cor-tema-hover:  #6b4820;
+    --cor-texto-lista: #DEB371;
+    --cor-fundo-body:  #CD9A5D;
 }

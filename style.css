@@ -1,4 +1,11 @@
-*{
+:root {
+    --cor-tema:        #DEB371; /* dourado — padrão do site          */
+    --cor-tema-hover:  #c9a227; /* dourado escuro — para hovers      */
+    --cor-texto-lista: #d1d1d1; /* cinza claro — texto nos cards     */
+    --cor-fundo-body:  #0f0f0f; /* preto — fundo padrão              */
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,19 +13,23 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color:#0f0f0f;
-    color:#d1d1d1;
+    background-color: var(--cor-fundo-body); /* redefina nas subpáginas */
+    color: #d1d1d1;
     text-align: justify;
-    line-height:1.6;
+    line-height: 1.6;
 }
 
-header{
-    background: linear-gradient(#1c1c1c,#111);
+
+header {
+    background: linear-gradient(#1c1c1c, #111);
     color: white;
     padding: 20px;
     text-align: center;
-    border-bottom: 2px solid #DEB371;
+    border-bottom: 2px solid var(--cor-tema);
 }
+
+
+/* LAYOUT DA PÁGINA INICIAL (index.html) */
 
 .layout-principal {
     display: grid;
@@ -27,16 +38,14 @@ header{
     gap: 40px;
 }
 
-
-/* Estilos para o conteúdo central */
-
-.inicio{
+.inicio {
     max-width: 750px;
     margin: 20px auto 60px;
     color: #d1d1d1;
     font-size: 1.1rem;
 }
 
+/* Grid dos 4 cards de categoria da index */
 .magias_container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -45,19 +54,19 @@ header{
     margin: 0 auto;
 }
 
-.card{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    text-align:center;
-    background:#181818;
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #181818;
     border-radius: 10px;
     border: 2px solid #DEB371;
     padding: 25px;
     transition: all 0.35s ease;
 }
 
-.card a{
+.card a {
     color: inherit;
     text-decoration: none;
 }
@@ -74,57 +83,52 @@ header{
     image-rendering: pixelated;
 }
 
-
-.feiticos{
-    color: #74ACDF;
-}
-
-.milagres{
-    color: #DEB371;
-}
-
-.piromancias{
-    color: #FF4500;
-}
-
-.sortilegios{
-    color: #8A2BE2;
-}
+/*
+   Cores dos cards da index — cada classe corresponde a uma categoria.
+   Essas cores SÓ afetam os cards da index.html, porque as classes
+   .feiticos, .milagres etc. só existem nos <div class="card feiticos">
+   da index. Elas NÃO vazam para as subpáginas.
+*/
+.feiticos    { color: #74ACDF; }
+.milagres    { color: #DEB371; }
+.piromancias { color: #FF4500; }
+.sortilegios { color: #8A2BE2; }
 
 .card.feiticos:hover {
     box-shadow: 0 0 20px rgba(116, 172, 223, 0.6);
     border-color: #74ACDF;
 }
-
 .card.milagres:hover {
     box-shadow: 0 0 20px rgba(222, 179, 113, 0.6);
     border-color: #DEB371;
 }
-
 .card.piromancias:hover {
     box-shadow: 0 0 20px rgba(255, 69, 0, 0.6);
     border-color: #FF4500;
 }
-
 .card.sortilegios:hover {
     box-shadow: 0 0 20px rgba(138, 43, 226, 0.6);
     border-color: #8A2BE2;
 }
 
-/* Estilos para as sidebars */
 
+/* ============================================================
+   SIDEBAR
+   Toda cor usa var(--cor-tema) e var(--cor-tema-hover).
+   Redefina as variáveis na subpágina → toda a sidebar muda.
+   ============================================================ */
 .sidebar {
-    background:#181818;
-    border-radius:8px;
-    border:1px solid #DEB371;
+    background: #181818;
+    border-radius: 8px;
+    border: 1px solid var(--cor-tema);
     padding: 20px;
-    align-self:start;
+    align-self: start;
 }
 
 .sidebar h3 {
-    color: #DEB371;
+    color: var(--cor-tema);
     margin-bottom: 15px;
-    border-bottom: 1px solid #c9a227;
+    border-bottom: 1px solid var(--cor-tema-hover);
     padding-bottom: 5px;
 }
 
@@ -143,14 +147,19 @@ header{
 }
 
 .sidebar a:hover {
-    color: #DEB371;
+    color: var(--cor-tema);
 }
 
+/* Sidebar de navegação das subpáginas */
 .sidebar.navegacao {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    width: 200px;     /* fixo em todas as subpáginas */
+    flex-shrink: 0;   /* não encolhe dentro do flex  */
+    position: sticky; /* acompanha o scroll da página */
+    top: 20px;
 }
 
 .sidebar.navegacao ul {
@@ -163,8 +172,11 @@ header{
     font-size: 1rem;
 }
 
-/* Estilos para footer e redes sociais */
 
+/* ============================================================
+   FOOTER
+   Usa cores fixas douradas — é igual em todo o site.
+   ============================================================ */
 footer {
     background: linear-gradient(#1c1c1c, #111);
     border-top: 2px solid #DEB371;
@@ -212,18 +224,26 @@ footer {
 }
 
 
-/* Estilos pre definidos para as paginas das magias */
+/* ============================================================
+   ESTRUTURA DAS SUBPÁGINAS DE MAGIA
+   (feiticos.html, milagres.html, piromancias.html, sortilegios.html)
 
+   Aqui: APENAS estrutura, tamanhos e espaçamentos.
+   Cores vêm de var(--cor-tema) e var(--cor-texto-lista),
+   redefinidas em cada CSS de subpágina.
+   ============================================================ */
 
-.secao{
+/* Container principal: sidebar + conteúdo lado a lado */
+.secao {
     display: flex;
     margin: 10px 100px 50px 100px;
-    border: 3px solid;
+    border: 3px solid var(--cor-tema); /* ← muda automaticamente por subpágina */
     background-color: #1a1a1a;
     padding: 20px;
     gap: 30px;
 }
 
+/* Grid de ícones + nomes das magias */
 .lista {
     display: grid;
     grid-template-columns: repeat(auto-fit, 256px);
@@ -231,44 +251,60 @@ footer {
     gap: 15px;
     font-weight: bold;
     width: 100%;
+    color: var(--cor-texto-lista); /* ← nome das magias muda por subpágina */
 }
 
-.lista div{
+/* Card individual de cada magia */
+.lista div {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 1px solid;
+    border: 1px solid var(--cor-tema); /* ← muda automaticamente */
     padding: 15px;
     background-color: #121212;
     transition: transform 0.2s ease;
     height: 280px;
 }
 
-.lista img{
+/* Leve zoom no hover dos cards */
+.lista div:hover {
+    transform: scale(1.03);
+}
+
+.lista img {
     width: 150px;
     height: 150px;
     object-fit: contain;
     image-rendering: pixelated;
 }
 
+/* Área que contém iframe + lista de magias */
 .conteudo-magias {
-    flex-grow: 1; 
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
 }
 
+/* iframe onde os detalhes da magia são exibidos */
 .iframe-detalhes {
     width: 100%;
     min-height: 70vh;
-    border: 2px solid;
+    border: 2px solid var(--cor-tema); /* ← muda automaticamente */
     border-radius: 5px;
     background-color: #121212;
     margin-bottom: 20px;
     overflow: hidden;
 }
 
-/* Estilos compartilhados para páginas de detalhes dentro do iframe */
+
+/* ============================================================
+   INTERIOR DO IFRAME (anseio.html, arma_magica.html, etc.)
+   Essas páginas só carregam style.css, então usam os valores
+   padrão de :root — o que está correto para feitiços.
+   Para adaptar à cor de outras categorias no futuro, basta
+   cada página de detalhe carregar também o CSS da sua subpágina.
+   ============================================================ */
 .iframe-body {
     background-color: #121212;
     color: #d1d1d1;
@@ -277,27 +313,29 @@ footer {
     padding: 15px;
 }
 
+/* Cabeçalho interno: nome da magia + badge de requisito */
 .cabecalho-magia {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid #74ACDF;
+    border-bottom: 2px solid var(--cor-tema);
     padding-bottom: 10px;
     margin-bottom: 15px;
 }
 
 .cabecalho-magia h2 {
-    color: #DEB371;
+    color: var(--cor-tema);
     font-family: 'Cinzel', serif;
     margin: 0;
     font-size: 1.5rem;
 }
 
+/* Badge de requisito: "Req: 14 INT" */
 .requisitos {
     background-color: #121212;
-    border: 1px solid #E0681D;
+    border: 1px solid var(--cor-tema);
     padding: 5px 10px;
-    color: #E0681D;
+    color: var(--cor-tema);
     font-weight: bold;
     border-radius: 4px;
 }
@@ -307,30 +345,37 @@ footer {
     gap: 20px;
 }
 
+.info-magia ul{
+    list-style-type: none
+}
+
 .texto-magia {
     flex: 1;
 }
 
-.texto-magia p {
+.texto-magia p, li{
     margin-top: 10px;
     line-height: 1.5;
     font-size: 0.95rem;
 }
 
+/* Rótulos "Descrição:", "Localização:", "Usos:" */
 .destaque {
-    color: #74ACDF;
+    color: var(--cor-tema);
     font-weight: bold;
 }
 
+/* GIF de demonstração da magia */
 .gif-magia {
     max-width: 620px;
     height: auto;
-    border: 2px solid #E0681D;
+    border: 2px solid var(--cor-texto-lista);
     border-radius: 5px;
     align-self: flex-start;
     object-fit: contain;
 }
 
+/* Link que envolve cada card sem alterar aparência */
 .link-magia {
     text-decoration: none;
     color: inherit;

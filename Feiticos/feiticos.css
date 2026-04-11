@@ -1,43 +1,8 @@
-body{
-    background-color: #1D94E0;
-}
 
-header{
-    border-bottom: 2px solid #E0681D;
-}
 
-.secao{
-    border-color: #E0681D;
-}
-
-.lista{
-    color: #74ACDF;
-}
-
-.lista div{
-    border-color: #E0681D;
-}
-
-.navegacao{
-    border: 1px solid #E0681D;
-}
-.sidebar.navegacao {    
-    width: 200px;
-    flex-shrink: 0; 
-    top: 20px;
-}
-
-.sidebar h3{
-   color: #E0681D; 
-   border-bottom: 1px solid #E0681D;
-}
-
-.sidebar a:hover {
-    color: #E0681D;
-}
-
-.iframe-detalhes {
-    border: 1px solid #E0681D;
-    min-height: 300px;      
-    height: 50vh;          
+:root {
+    --cor-tema:        #E0681D;
+    --cor-tema-hover:  #b84e12;
+    --cor-texto-lista: #74ACDF;
+    --cor-fundo-body:  #1D94E0;
 }

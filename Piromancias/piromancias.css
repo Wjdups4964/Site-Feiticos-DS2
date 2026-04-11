@@ -1,38 +1,17 @@
-body{
-    background-color: #AB2000;
-}
+/* ============================================================
+   PIROMANCIAS.CSS — Identidade visual das Piromâncias
+   Importado APÓS style.css. Só redefine variáveis e cor de fundo.
 
-header{
-    border-bottom: 2px solid #AB7600;
-}
+   Cores das Piromâncias:
+     Tema principal → Amarelo queimado  #AB7600
+     Hover/detalhe  → Amarelo escuro    #7a5500
+     Texto da lista → Vermelho escuro   #AB2000
+     Fundo          → Vermelho sangue   #AB2000
+   ============================================================ */
 
-.secao{
-    border-color: #AB7600;
-}
-
-.lista{
-    color: #AB2000;
-}
-
-.lista div{
-    border-color: #AB7600;
-}
-
-.navegacao{
-    border: 1px solid #AB7600;
-}
-.sidebar.navegacao {    
-    width: 200px;
-    flex-shrink: 0; 
-    position: sticky;
-    top: 20px;
-}
-
-.sidebar h3{
-   color: #AB7600; 
-   border-bottom: 1px solid #AB7600;
-}
-
-.sidebar a:hover {
-    color: #AB7600;
+:root {
+    --cor-tema:        #AB7600;
+    --cor-tema-hover:  #7a5500;
+    --cor-texto-lista: #ff8c42; /* laranja mais legível que o vermelho escuro no fundo */
+    --cor-fundo-body:  #AB2000;
 }

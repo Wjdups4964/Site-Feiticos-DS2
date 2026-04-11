@@ -1,6 +1,6 @@
-/* Responsividade para o index.html */
+/* respo.css — Responsividade geral do site */
 
-/* Tablet e desktop médio */
+/* Tablet */
 @media (max-width: 1024px) {
     .layout-principal {
         grid-template-columns: 180px 1fr 180px;
@@ -8,145 +8,12 @@
         padding: 15px;
     }
 
-    .sidebar.navegacao {
-        margin: 0 auto;
-    }
-
     .magias_container {
         grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
     }
 
-    .inicio {
-        font-size: 1rem;
-        margin: 15px auto 40px;
-    }
-
-    .sidebar {
-        padding: 15px;
-    }
-}
-
-/* Mobile grande */
-@media (max-width: 768px) {
-    .layout-principal {
-        grid-template-columns: 1fr;
-        gap: 15px;
-        padding: 10px;
-    }
-
-    .sidebar.navegacao {
-        margin: 0 auto;
-        max-width: 350px;
-        width: 100%;
-    }
-
-    .magias_container {
-        grid-template-columns: 1fr;
-        gap: 10px;
-        margin: 0;
-    }
-
-    .card {
-        padding: 20px;
-    }
-
-    .card img {
-        width: 80px;
-        height: 80px;
-    }
-
-    .inicio {
-        font-size: 0.95rem;
-        margin: 10px 0 30px;
-        text-align: left;
-    }
-
-    .sidebar {
-        padding: 10px;
-        text-align: center;
-    }
-
-    footer {
-        padding: 25px 10px;
-        margin-top: 40px;
-    }
-}
-
-/* Mobile pequeno */
-@media (max-width: 480px) {
-    .layout-principal {
-        padding: 5px;
-        gap: 10px;
-    }
-
-    .inicio {
-        font-size: 0.9rem;
-        line-height: 1.5;
-    }
-
-    .card {
-        padding: 15px;
-    }
-
-    .card img {
-        width: 60px;
-        height: 60px;
-        margin-bottom: 10px;
-    }
-
-    .card h2 {
-        font-size: 1.1rem;
-    }
-
-    .sidebar h3 {
-        font-size: 1rem;
-    }
-
-    .sidebar ul li {
-        margin-bottom: 8px;
-    }
-
-    .sidebar.navegacao {
-        margin: 0 auto;
-        max-width: 300px;
-        width: 100%;
-    }
-
-    footer {
-        padding: 20px 10px;
-        margin-top: 30px;
-    }
-
-    .footer-redes-sociais {
-        gap: 15px;
-    }
-
-    .footer-redes-sociais a {
-        width: 45px;
-        height: 45px;
-    }
-
-    .footer-redes-sociais img {
-        width: 24px;
-        height: 24px;
-    }
-
-    header {
-        padding: 15px;
-    }
-
-    header h1 {
-        font-size: 1.3rem;
-    }
-}
-
-/* Responsividade para as páginas das magias */
-
-@media (max-width: 1024px) {
     .secao {
-        margin: 10px 50px 50px 50px;
-        gap: 20px;
+        margin: 10px 40px 40px;
     }
 
     .lista {
@@ -154,66 +21,96 @@
     }
 }
 
-@media (max-width: 762px) {
+/* Mobile */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.4rem;
+    }
+
+    /* Index */
+    .layout-principal {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .magias_container {
+        grid-template-columns: 1fr;
+        margin: 0;
+    }
+
+    /* Subpáginas: sidebar acima do conteúdo */
     .secao {
         flex-direction: column;
-        margin: 10px 20px 50px 20px;
+        margin: 10px 15px 40px;
         align-items: center;
-        gap: 15px;
-    }
-
-    .sidebar.navegacao {
-        width: 80%;
-        max-width: 400px;
-        position: static;
-        text-align: center;
-    }
-
-    .sidebar {
-        justify-content: center;
-        align-items: center;
-    }
-
-    .lista {
-        grid-template-columns: repeat(auto-fit, 150px);
-        gap: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    .secao {
-        margin: 10px 10px 30px 10px;
-        padding: 15px;
     }
 
     .sidebar.navegacao {
         width: 100%;
+        max-width: 450px;
+        position: static;
+    }
+
+    .conteudo-magias {
+        width: 100% !important;
+    }
+
+    .lista {
+        grid-template-columns: repeat(auto-fit, 150px);
+    }
+
+    /* iframe maior para exibir bem os detalhes */
+    .iframe-detalhes {
+        min-height: 80vh;
+    }
+
+    /* Interior do iframe: texto e gif empilham em coluna */
+    .cabecalho-magia {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .info-magia {
+        flex-direction: column;
+    }
+
+    .gif-magia {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+/* Mobile pequeno */
+@media (max-width: 480px) {
+    .layout-principal {
+        padding: 8px;
+    }
+
+    .secao {
+        margin: 8px;
+        padding: 10px;
     }
 
     .lista {
         grid-template-columns: 1fr;
-        gap: 8px;
     }
 
-
-/* Responsividade do iframe */
-
-@media (max-width: 1024px) {
-    .iframe-detalhes {
-        min-height: 65vh;
-        max-height: calc(100vh - 130px);
+    .lista div {
+        flex-direction: row;
+        height: auto;
+        padding: 10px 15px;
+        gap: 15px;
     }
-}
 
-@media (max-width: 768px) {
-    .iframe-detalhes {
-        min-height: 60vh;
+    .lista img {
+        width: 70px;
+        height: 70px;
+        flex-shrink: 0;
     }
-}
 
-@media (max-width: 480px) {
+    /* iframe ainda maior em telas pequenas */
     .iframe-detalhes {
-        min-height: 55vh;
-        margin-bottom: 15px;
+        min-height: 90vh;
     }
 }
