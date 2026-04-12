@@ -178,10 +178,9 @@ header {
    Usa cores fixas douradas — é igual em todo o site.
    ============================================================ */
 footer {
-    background: linear-gradient(#1c1c1c, #111);
+    background: linear-gradient(to top, #1c1c1c, #111);
     border-top: 2px solid #DEB371;
     padding: 35px 20px;
-    margin-top: 60px;
 }
 
 .footer-redes-sociais {
@@ -189,7 +188,7 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 25px;
-    max-width: 1200px;
+    max-width: 800px;
     margin: 0 auto;
     flex-wrap: wrap;
 }
