@@ -247,6 +247,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(auto-fit, 256px);
     justify-content: center;
+    
     gap: 15px;
     font-weight: bold;
     width: 100%;
@@ -259,6 +260,7 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
     border: 1px solid var(--cor-tema); /* ← muda automaticamente */
     padding: 15px;
     background-color: #121212;
@@ -288,7 +290,7 @@ footer {
 /* iframe onde os detalhes da magia são exibidos */
 .iframe-detalhes {
     width: 100%;
-    min-height: 70vh;
+    min-height: 60vh;
     border: 2px solid var(--cor-tema); /* ← muda automaticamente */
     border-radius: 5px;
     background-color: #121212;
@@ -378,4 +380,17 @@ footer {
 .link-magia {
     text-decoration: none;
     color: inherit;
+}
+
+@media (max-width: 1100px) {
+    /* Interior do iframe: texto e gif empilham em coluna */
+    .info-magia {
+        flex-direction: column;
+    }
+
+    .gif-magia {
+        max-width: 100%;
+        width: 80%;
+        align-self: center;
+    }
 }
