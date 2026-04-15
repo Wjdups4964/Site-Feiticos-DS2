@@ -300,7 +300,7 @@ footer {
 
 
 /* ============================================================
-   INTERIOR DO IFRAME (anseio.html, arma_magica.html, etc.)
+   INTERIOR DO IFRAME (anseio.html, arma-magica.html, etc.)
    Essas páginas só carregam style.css, então usam os valores
    padrão de :root — o que está correto para feitiços.
    Para adaptar à cor de outras categorias no futuro, basta
