@@ -1,4 +1,4 @@
-/* respo.css — Responsividade geral do site */
+/* Responsividade do site */
 
 /* Tablet */
 @media (max-width: 1170px) {
@@ -29,7 +29,7 @@
         font-size: 1.4rem;
     }
 
-    /* Index */
+    /* Página inicial */
     .layout-principal {
         grid-template-columns: 1fr;
         padding: 10px;
@@ -40,7 +40,7 @@
         margin: 0;
     }
 
-    /* Subpáginas: sidebar acima do conteúdo */
+    /* Sidebar acima do conteúdo */
     .secao {
         flex-direction: column;
         margin: 10px 15px 40px;
@@ -61,12 +61,12 @@
         grid-template-columns: repeat(auto-fit, 150px);
     }
 
-    /* iframe maior para exibir bem os detalhes */
+    /* Iframe maior */
     .iframe-detalhes {
         min-height: 80vh;
     }
 
-    /* Interior do iframe: texto e gif empilham em coluna */
+    /* Iframe em coluna */
     .cabecalho-magia {
         flex-direction: column;
         align-items: flex-start;
@@ -111,7 +111,7 @@
         flex-shrink: 0;
     }
 
-    /* iframe ainda maior em telas pequenas */
+    /* Iframe ainda maior */
     .iframe-detalhes {
         min-height: 90vh;
     }

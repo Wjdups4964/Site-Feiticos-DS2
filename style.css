@@ -29,7 +29,7 @@ header {
 }
 
 
-/* LAYOUT DA PÁGINA INICIAL (index.html) */
+/* Layout da página inicial */
 
 .layout-principal {
     display: grid;
@@ -45,7 +45,7 @@ header {
     font-size: 1.1rem;
 }
 
-/* Grid dos 4 cards de categoria da index */
+/* Grid dos cards da página inicial */
 .magias_container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -84,10 +84,7 @@ header {
 }
 
 /*
-   Cores dos cards da index — cada classe corresponde a uma categoria.
-   Essas cores SÓ afetam os cards da index.html, porque as classes
-   .feiticos, .milagres etc. só existem nos <div class="card feiticos">
-   da index. Elas NÃO vazam para as subpáginas.
+   Cores dos cards da página inicial.
 */
 .feiticos    { color: #74ACDF; }
 .milagres    { color: #DEB371; }
@@ -114,8 +111,7 @@ header {
 
 /* ============================================================
    SIDEBAR
-   Toda cor usa var(--cor-tema) e var(--cor-tema-hover).
-   Redefina as variáveis na subpágina → toda a sidebar muda.
+   Usa var(--cor-tema) e var(--cor-tema-hover).
    ============================================================ */
 .sidebar {
     background: #181818;
@@ -150,15 +146,15 @@ header {
     color: var(--cor-tema);
 }
 
-/* Sidebar de navegação das subpáginas */
+/* Navegação fixa nas subpáginas */
 .sidebar.navegacao {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    width: 200px;     /* fixo em todas as subpáginas */
-    flex-shrink: 0;   /* não encolhe dentro do flex  */
-    position: sticky; /* acompanha o scroll da página */
+    width: 200px;     /* fixo */
+    flex-shrink: 0;   /* não encolhe */
+    position: sticky; /* sticky */
     top: 20px;
 }
 
@@ -174,8 +170,7 @@ header {
 
 
 /* ============================================================
-   FOOTER
-   Usa cores fixas douradas — é igual em todo o site.
+   RODAPÉ
    ============================================================ */
 footer {
     background: linear-gradient(to top, #1c1c1c, #111);
@@ -227,12 +222,10 @@ footer {
    ESTRUTURA DAS SUBPÁGINAS DE MAGIA
    (feiticos.html, milagres.html, piromancias.html, sortilegios.html)
 
-   Aqui: APENAS estrutura, tamanhos e espaçamentos.
-   Cores vêm de var(--cor-tema) e var(--cor-texto-lista),
-   redefinidas em cada CSS de subpágina.
+   Estrutura geral: tamanhos e espaçamentos.
    ============================================================ */
 
-/* Container principal: sidebar + conteúdo lado a lado */
+/* Container principal */
 .secao {
     display: flex;
     margin: 10px 100px 50px 100px;
@@ -242,7 +235,7 @@ footer {
     gap: 30px;
 }
 
-/* Grid de ícones + nomes das magias */
+/* Grid dos cards de magia */
 .lista {
     display: grid;
     grid-template-columns: repeat(auto-fit, 256px);
@@ -268,7 +261,7 @@ footer {
     height: 280px;
 }
 
-/* Leve zoom no hover dos cards */
+/* Zoom suave no hover */
 .lista div:hover {
     transform: scale(1.03);
 }
@@ -280,14 +273,14 @@ footer {
     image-rendering: pixelated;
 }
 
-/* Área que contém iframe + lista de magias */
+/* Área de conteúdo */
 .conteudo-magias {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
 }
 
-/* iframe onde os detalhes da magia são exibidos */
+/* Iframe de detalhes */
 .iframe-detalhes {
     width: 100%;
     min-height: 60vh;
@@ -300,11 +293,8 @@ footer {
 
 
 /* ============================================================
-   INTERIOR DO IFRAME (anseio.html, arma-magica.html, etc.)
-   Essas páginas só carregam style.css, então usam os valores
-   padrão de :root — o que está correto para feitiços.
-   Para adaptar à cor de outras categorias no futuro, basta
-   cada página de detalhe carregar também o CSS da sua subpágina.
+   INTERIOR DO IFRAME
+   (anseio.html, arma-magica.html, etc.)
    ============================================================ */
 .iframe-body {
     background-color: #121212;
@@ -360,13 +350,13 @@ footer {
     font-size: 0.95rem;
 }
 
-/* Rótulos "Descrição:", "Localização:", "Usos:" */
+/* Estilo dos rótulos */
 .destaque {
     color: var(--cor-tema);
     font-weight: bold;
 }
 
-/* GIF de demonstração da magia */
+/* GIF da magia */
 .gif-magia {
     max-width: 620px;
     height: auto;
@@ -376,14 +366,14 @@ footer {
     object-fit: contain;
 }
 
-/* Link que envolve cada card sem alterar aparência */
+/* Link do card */
 .link-magia {
     text-decoration: none;
     color: inherit;
 }
 
 @media (max-width: 1100px) {
-    /* Interior do iframe: texto e gif empilham em coluna */
+    /* No iframe, texto e GIF em coluna. No respo.css não estava indo */
     .info-magia {
         flex-direction: column;
     }
