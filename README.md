@@ -5,10 +5,9 @@ Site desenvolvido para a disciplina de Desenvolvimento Web, com o intuito de aju
 <a href="https://wjdups4964.github.io/Site-Feiticos-DS2/" target="_blank">Acesse o Projeto Aqui</a>
 
 ### Tecnologias Utilizadas até o momento:
-* HTML5 & CSS
-
+* HTML5, CSS & JS
 ### Status 
-Em desenvolvimento.
+Completo com algumas partes faltando.
 
 ---
 **Desenvolvedor:** José Victor
